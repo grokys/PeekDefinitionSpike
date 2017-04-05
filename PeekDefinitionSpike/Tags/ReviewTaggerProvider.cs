@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Tagging;
 using Microsoft.VisualStudio.Utilities;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Tags
 {
     [Export(typeof(ITaggerProvider))]
     [ContentType("code")]

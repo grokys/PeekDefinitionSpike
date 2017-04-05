@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.Text.Editor;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Tags
 {
     public class ReviewTag : IGlyphTag
     {

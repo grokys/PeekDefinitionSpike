@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Tagging;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Tags
 {
     public class ReviewTagger : ITagger<ReviewTag>
     {

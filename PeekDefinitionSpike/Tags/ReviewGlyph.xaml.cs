@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Tags
 {
     /// <summary>
     /// Interaction logic for ReviewGlyph.xaml

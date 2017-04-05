@@ -45,23 +45,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReviewGlyph.xaml.cs">
+    <Compile Include="Tags\ReviewGlyph.xaml.cs">
       <DependentUpon>ReviewGlyph.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ReviewGlyphFactory.cs" />
-    <Compile Include="ReviewGlyphFactoryProvider.cs" />
-    <Compile Include="ReviewGlyphMouseProcessor.cs" />
-    <Compile Include="ReviewPeekableItem.cs" />
-    <Compile Include="ReviewPeekableItemSource.cs" />
-    <Compile Include="ReviewPeekableItemSourceProvider.cs" />
-    <Compile Include="ReviewPeekableResultSource.cs" />
-    <Compile Include="ReviewPeekRelationship.cs" />
-    <Compile Include="ReviewPeekResult.cs" />
-    <Compile Include="ReviewPeekResultPresentation.cs" />
-    <Compile Include="ReviewPeekResultPresenter.cs" />
-    <Compile Include="ReviewTag.cs" />
-    <Compile Include="ReviewTagger.cs" />
-    <Compile Include="ReviewTaggerProvider.cs" />
+    <Compile Include="Tags\ReviewGlyphFactory.cs" />
+    <Compile Include="Tags\ReviewGlyphFactoryProvider.cs" />
+    <Compile Include="Tags\ReviewGlyphMouseProcessor.cs" />
+    <Compile Include="Peek\ReviewPeekableItem.cs" />
+    <Compile Include="Peek\ReviewPeekableItemSource.cs" />
+    <Compile Include="Peek\ReviewPeekableItemSourceProvider.cs" />
+    <Compile Include="Peek\ReviewPeekableResultSource.cs" />
+    <Compile Include="Peek\ReviewPeekRelationship.cs" />
+    <Compile Include="Peek\ReviewPeekResult.cs" />
+    <Compile Include="Peek\ReviewPeekResultPresentation.cs" />
+    <Compile Include="Peek\ReviewPeekResultPresenter.cs" />
+    <Compile Include="Tags\ReviewTag.cs" />
+    <Compile Include="Tags\ReviewTagger.cs" />
+    <Compile Include="Tags\ReviewTaggerProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -107,7 +107,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="ReviewGlyph.xaml">
+    <Page Include="Tags\ReviewGlyph.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

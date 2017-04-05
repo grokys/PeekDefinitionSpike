@@ -7,7 +7,7 @@ using System.Windows;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Formatting;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Tags
 {
     public class ReviewGlyphFactory : IGlyphFactory
     {

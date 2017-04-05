@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Utilities;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Peek
 {
     [Export(typeof(IPeekableItemSourceProvider))]
     [ContentType("text")]

@@ -5,8 +5,9 @@ using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Tagging;
+using PeekDefinitionSpike.Peek;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Tags
 {
     public class ReviewGlyphMouseProcessor : MouseProcessorBase
     {

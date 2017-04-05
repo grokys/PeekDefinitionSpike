@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.Language.Intellisense;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Peek
 {
     class ReviewPeekableResultSource : IPeekResultSource
     {

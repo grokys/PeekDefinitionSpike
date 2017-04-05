@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.Language.Intellisense;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Peek
 {
     class ReviewPeekRelationship : IPeekRelationship
     {

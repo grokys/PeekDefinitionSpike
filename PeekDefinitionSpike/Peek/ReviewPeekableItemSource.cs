@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Language.Intellisense;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Peek
 {
     public class ReviewPeekableItemSource : IPeekableItemSource
     {

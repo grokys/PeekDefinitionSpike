@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Microsoft.VisualStudio.Language.Intellisense;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Peek
 {
     class ReviewPeekResultPresentation : IPeekResultPresentation
     {

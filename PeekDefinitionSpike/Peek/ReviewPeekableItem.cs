@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.Language.Intellisense;
 
-namespace PeekDefinitionSpike
+namespace PeekDefinitionSpike.Peek
 {
     public class ReviewPeekableItem : IPeekableItem
     {

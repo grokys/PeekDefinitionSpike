@@ -16,13 +16,15 @@ namespace PeekDefinitionSpike.Tags
     class ReviewGlyphFactoryProvider : IGlyphFactoryProvider, IGlyphMouseProcessorProvider
     {
         readonly IPeekBroker peekBroker;
-        readonly IViewTagAggregatorFactoryService aggregator;
+        readonly IViewTagAggregatorFactoryService tagAggregatorFactory;
 
         [ImportingConstructor]
-        public ReviewGlyphFactoryProvider(IPeekBroker peekBroker, IViewTagAggregatorFactoryService aggregator)
+        public ReviewGlyphFactoryProvider(
+            IPeekBroker peekBroker,
+            IViewTagAggregatorFactoryService tagAggregatorFactory)
         {
             this.peekBroker = peekBroker;
-            this.aggregator = aggregator;
+            this.tagAggregatorFactory = tagAggregatorFactory;
         }
 
         public IGlyphFactory GetGlyphFactory(IWpfTextView view, IWpfTextViewMargin margin)
@@ -36,7 +38,7 @@ namespace PeekDefinitionSpike.Tags
                 peekBroker,
                 wpfTextViewHost.TextView,
                 margin,
-                aggregator.CreateTagAggregator<ReviewTag>(wpfTextViewHost.TextView));
+                tagAggregatorFactory.CreateTagAggregator<ReviewTag>(wpfTextViewHost.TextView));
         }
     }
 }

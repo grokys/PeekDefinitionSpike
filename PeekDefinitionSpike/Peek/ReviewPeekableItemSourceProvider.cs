@@ -2,7 +2,9 @@
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Text;
+using Microsoft.VisualStudio.Text.Tagging;
 using Microsoft.VisualStudio.Utilities;
+using PeekDefinitionSpike.Tags;
 
 namespace PeekDefinitionSpike.Peek
 {
@@ -11,9 +13,17 @@ namespace PeekDefinitionSpike.Peek
     [Name("GitHub Peekable Review Provider")]
     class ReviewPeekableItemSourceProvider : IPeekableItemSourceProvider
     {
+        readonly IViewTagAggregatorFactoryService tagAggregatorFactory;
+
+        [ImportingConstructor]
+        public ReviewPeekableItemSourceProvider(IViewTagAggregatorFactoryService tagAggregatorFactory)
+        {
+            this.tagAggregatorFactory = tagAggregatorFactory;
+        }
+
         public IPeekableItemSource TryCreatePeekableItemSource(ITextBuffer textBuffer)
         {
-            return new ReviewPeekableItemSource();
+            return new ReviewPeekableItemSource(textBuffer, tagAggregatorFactory);
         }
     }
 }

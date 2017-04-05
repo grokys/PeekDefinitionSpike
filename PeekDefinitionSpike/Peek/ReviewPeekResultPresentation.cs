@@ -7,11 +7,14 @@ namespace PeekDefinitionSpike.Peek
 {
     class ReviewPeekResultPresentation : IPeekResultPresentation
     {
+        readonly ReviewPeekResult result;
+
         public bool IsDirty => false;
         public bool IsReadOnly => true;
 
         public ReviewPeekResultPresentation(ReviewPeekResult result)
         {
+            this.result = result;
         }
 
         public double ZoomLevel
@@ -41,10 +44,19 @@ namespace PeekDefinitionSpike.Peek
 
         public UIElement Create(IPeekSession session, IPeekResultScrollState scrollState)
         {
-            return new TextBlock
+            var panel = new StackPanel();
+
+            foreach (var comment in result.Comments)
             {
-                Text = "Something looks fishy here...",
-            };
+                var control = new TextBlock
+                {
+                    Text = comment.Body,
+                };
+
+                panel.Children.Add(control);
+            }
+
+            return panel;
         }
 
         public void Dispose()

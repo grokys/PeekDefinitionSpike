@@ -1,13 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.VisualStudio.Text.Editor;
+using PeekDefinitionSpike.Models;
 
 namespace PeekDefinitionSpike.Tags
 {
     class ReviewTag : IGlyphTag
     {
+        public ReviewTag(PullRequestComment comment)
+        {
+            Comment = comment;
+        }
+
+        public PullRequestComment Comment { get; }
     }
 }

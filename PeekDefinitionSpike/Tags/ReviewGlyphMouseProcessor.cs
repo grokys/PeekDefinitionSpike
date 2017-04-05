@@ -14,7 +14,7 @@ namespace PeekDefinitionSpike.Tags
         readonly IPeekBroker peekBroker;
         readonly ITextView textView;
         readonly IWpfTextViewMargin margin;
-        readonly ITagAggregator<ReviewTag> aggregator;
+        readonly ITagAggregator<ReviewTag> tagAggregator;
 
         public ReviewGlyphMouseProcessor(
             IPeekBroker peekBroker,
@@ -25,7 +25,7 @@ namespace PeekDefinitionSpike.Tags
             this.peekBroker = peekBroker;
             this.textView = textView;
             this.margin = margin;
-            this.aggregator = aggregator;
+            this.tagAggregator = aggregator;
         }
 
         public override void PreprocessMouseLeftButtonUp(MouseButtonEventArgs e)
@@ -35,7 +35,7 @@ namespace PeekDefinitionSpike.Tags
 
             if (line != null)
             {
-                var tag = aggregator.GetTags(line.ExtentAsMappingSpan).FirstOrDefault();
+                var tag = tagAggregator.GetTags(line.ExtentAsMappingSpan).FirstOrDefault();
 
                 if (tag != null)
                 {

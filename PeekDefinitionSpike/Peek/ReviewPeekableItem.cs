@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.VisualStudio.Language.Intellisense;
+using PeekDefinitionSpike.Models;
 
 namespace PeekDefinitionSpike.Peek
 {
     class ReviewPeekableItem : IPeekableItem
     {
-        public ReviewPeekableItem(string text)
+        readonly IList<PullRequestComment> comments;
+
+        public ReviewPeekableItem(IList<PullRequestComment> comments)
         {
+            this.comments = comments;
         }
 
         public string DisplayName => "GitHub Code Review";
@@ -19,7 +20,7 @@ namespace PeekDefinitionSpike.Peek
 
         public IPeekResultSource GetOrCreateResultSource(string relationshipName)
         {
-            return new ReviewPeekableResultSource();
+            return new ReviewPeekableResultSource(comments);
         }
     }
 }

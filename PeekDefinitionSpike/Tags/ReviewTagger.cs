@@ -36,7 +36,9 @@ namespace PeekDefinitionSpike.Tags
                 foreach (var comment in spanComments)
                 {
                     var line = span.Snapshot.GetLineFromLineNumber(comment.Position - 1);
-                    yield return new TagSpan<ReviewTag>(new SnapshotSpan(line.Start, line.End), new ReviewTag());
+                    yield return new TagSpan<ReviewTag>(
+                        new SnapshotSpan(line.Start, line.End),
+                        new ReviewTag(comment));
                 }
             }
         }

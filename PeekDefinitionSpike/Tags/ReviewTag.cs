@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.Text.Editor;
 
 namespace PeekDefinitionSpike.Tags
 {
-    public class ReviewTag : IGlyphTag
+    class ReviewTag : IGlyphTag
     {
     }
 }

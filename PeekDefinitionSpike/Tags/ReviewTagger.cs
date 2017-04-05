@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.Text.Tagging;
 
 namespace PeekDefinitionSpike.Tags
 {
-    public class ReviewTagger : ITagger<ReviewTag>
+    class ReviewTagger : ITagger<ReviewTag>
     {
         readonly ITextBuffer buffer;
 

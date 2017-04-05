@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.Text.Formatting;
 
 namespace PeekDefinitionSpike.Tags
 {
-    public class ReviewGlyphFactory : IGlyphFactory
+    class ReviewGlyphFactory : IGlyphFactory
     {
         public UIElement GenerateGlyph(IWpfTextViewLine line, IGlyphTag tag)
         {

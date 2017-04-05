@@ -9,7 +9,7 @@ using PeekDefinitionSpike.Peek;
 
 namespace PeekDefinitionSpike.Tags
 {
-    public class ReviewGlyphMouseProcessor : MouseProcessorBase
+    class ReviewGlyphMouseProcessor : MouseProcessorBase
     {
         readonly IPeekBroker peekBroker;
         readonly ITextView textView;

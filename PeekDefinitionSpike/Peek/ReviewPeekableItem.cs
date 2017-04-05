@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.Language.Intellisense;
 
 namespace PeekDefinitionSpike.Peek
 {
-    public class ReviewPeekableItem : IPeekableItem
+    class ReviewPeekableItem : IPeekableItem
     {
         public ReviewPeekableItem(string text)
         {

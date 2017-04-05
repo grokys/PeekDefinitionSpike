@@ -10,7 +10,7 @@ namespace PeekDefinitionSpike.Tags
     [Export(typeof(ITaggerProvider))]
     [ContentType("code")]
     [TagType(typeof(ReviewTag))]
-    public class ReviewTaggerProvider : ITaggerProvider
+    class ReviewTaggerProvider : ITaggerProvider
     {
         public ITagger<T> CreateTagger<T>(ITextBuffer buffer) where T : ITag
         {

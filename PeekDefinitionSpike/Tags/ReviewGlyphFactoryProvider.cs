@@ -13,7 +13,7 @@ namespace PeekDefinitionSpike.Tags
     [Order(Before = "VsTextMarker")]
     [ContentType("code")]
     [TagType(typeof(ReviewTag))]
-    public class ReviewGlyphFactoryProvider : IGlyphFactoryProvider, IGlyphMouseProcessorProvider
+    class ReviewGlyphFactoryProvider : IGlyphFactoryProvider, IGlyphMouseProcessorProvider
     {
         readonly IPeekBroker peekBroker;
         readonly IViewTagAggregatorFactoryService aggregator;

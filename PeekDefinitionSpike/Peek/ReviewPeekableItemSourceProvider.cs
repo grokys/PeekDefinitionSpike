@@ -9,7 +9,7 @@ namespace PeekDefinitionSpike.Peek
     [Export(typeof(IPeekableItemSourceProvider))]
     [ContentType("text")]
     [Name("GitHub Peekable Review Provider")]
-    public class ReviewPeekableItemSourceProvider : IPeekableItemSourceProvider
+    class ReviewPeekableItemSourceProvider : IPeekableItemSourceProvider
     {
         public IPeekableItemSource TryCreatePeekableItemSource(ITextBuffer textBuffer)
         {

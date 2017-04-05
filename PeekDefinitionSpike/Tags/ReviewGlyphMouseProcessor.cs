@@ -46,6 +46,8 @@ namespace PeekDefinitionSpike.Tags
                         textView,
                         trackingPoint,
                         ReviewPeekRelationship.Instance.Name);
+
+                    e.Handled = true;
                 }
             }
         }

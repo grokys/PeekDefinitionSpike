@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.VisualStudio.Language.Intellisense;
+using PeekDefinitionSpike.ViewModels;
+using PeekDefinitionSpike.Views;
 
 namespace PeekDefinitionSpike.Peek
 {
@@ -44,19 +46,16 @@ namespace PeekDefinitionSpike.Peek
 
         public UIElement Create(IPeekSession session, IPeekResultScrollState scrollState)
         {
-            var panel = new StackPanel();
+            var viewModel = new CommentBlockViewModel();
+            var view = new CommentBlockView();
 
             foreach (var comment in result.Comments)
             {
-                var control = new TextBlock
-                {
-                    Text = comment.Body,
-                };
-
-                panel.Children.Add(control);
+                viewModel.Comments.Add(comment);
             }
 
-            return panel;
+            view.DataContext = viewModel;
+            return view;
         }
 
         public void Dispose()
